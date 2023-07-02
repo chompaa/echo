@@ -1,0 +1,134 @@
+@import "./_variables.scss";
+
+.header-outer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header-container,
+.header-container-dark {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 2rem 0;
+  color: inherit;
+
+  h1 {
+    padding-left: 8rem;
+  }
+
+  a, a:link, a:visited, button {
+    color: inherit;
+  }
+}
+
+.shop-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  z-index: 10;
+}
+
+.cart,
+.cart-background,
+.cart-container {
+  z-index: 10;
+}
+
+.cart-background {
+  background-color: black;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer
+}
+
+.cart {
+  width: 25rem;
+  height: calc(100% - 4rem);
+  padding: 2rem;
+  background-color: white;
+  right: 0;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+
+
+  .divider {
+    margin-bottom: 2rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  h3 {
+    font-weight: 1000;
+  }
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+}
+
+.cart-item-outer {
+  display: flex;
+  gap: 2rem;
+
+  img {
+    width: 5.5rem;
+    border: 2px solid black;
+  }
+
+  .remove {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    background-color: transparent; 
+    cursor: pointer;
+
+    &:hover {
+      color: black
+    }
+  }
+}
+
+.cart-item-info {
+  width: 100%;
+
+  h4 {
+    margin: 0;
+    font-weight: 800;
+  }
+
+  h5 {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-style: italic;
+    font-size: 0.83rem;
+    font-weight: 600;
+  }
+}
