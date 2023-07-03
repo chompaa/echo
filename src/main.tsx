@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <Header />,
     children: [
       {
-        path: "/shop/",
+        path: "/echo/shop/",
         children: [
           {
             path: "clothing",
