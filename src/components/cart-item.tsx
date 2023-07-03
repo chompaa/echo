@@ -20,7 +20,7 @@ function CartItem({
 }) {
   return (
     <div className="cart-item-outer">
-      <Link to={`/shop/${id}`} onClick={closeCart}>
+      <Link to={`/echo/shop/${id}`} onClick={closeCart}>
         <img src={image} alt={name} />
       </Link>
       <div className="cart-item-info">

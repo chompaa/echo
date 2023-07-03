@@ -13,7 +13,7 @@ function Header({ dark }: { dark?: boolean }) {
     <div className="header-outer">
       {cartVisible && <Cart close={toggleCartVisible} />}
       <div className={`${dark ? "header-container-dark" : "header-container"}`}>
-        <Link to={`/`}>
+        <Link to={`/echo/`}>
           <h1>Echo</h1>
         </Link>
         <div className="navigation">
@@ -23,7 +23,7 @@ function Header({ dark }: { dark?: boolean }) {
               <ShopMenu close={() => setShopMenuVisible(false)} />
             )}
           </div>
-          <Link to={`/about`}>
+          <Link to={`/echo/about`}>
             <button>About</button>
           </Link>
           <button onClick={toggleCartVisible}>Cart</button>

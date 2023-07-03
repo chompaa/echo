@@ -14,7 +14,7 @@ function ProductCard({
   currency: string;
 }) {
   return (
-    <Link to={`/shop/${id}`}>
+    <Link to={`/echo/shop/${id}`}>
       <div className="product-card">
         <img src={image} alt={name} />
         <h4>{name}</h4>
