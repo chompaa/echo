@@ -11,7 +11,7 @@ import Equipment, { loader as equipmentLoader } from "./routes/equipment";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/echo/",
     element: <Root />,
     errorElement: <ErrorPage />,
   },
