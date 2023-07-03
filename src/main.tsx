@@ -9,39 +9,44 @@ import Product, { loader as productLoader } from "./routes/product";
 import Header from "./components/header";
 import Equipment, { loader as equipmentLoader } from "./routes/equipment";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Root />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      element: <Header />,
+      children: [
+        {
+          path: "/shop/",
+          children: [
+            {
+              path: "clothing",
+              element: <Clothing />,
+              loader: clothingLoader,
+            },
+            {
+              path: "equipment",
+              element: <Equipment />,
+              loader: equipmentLoader,
+            },
+            {
+              path: ":id",
+              element: <Product />,
+              loader: productLoader,
+              errorElement: <ErrorPage />,
+            },
+          ],
+        },
+      ],
+    },
+  ],
   {
-    path: "/echo/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    element: <Header />,
-    children: [
-      {
-        path: "/echo/shop/",
-        children: [
-          {
-            path: "clothing",
-            element: <Clothing />,
-            loader: clothingLoader,
-          },
-          {
-            path: "equipment",
-            element: <Equipment />,
-            loader: equipmentLoader,
-          },
-          {
-            path: ":id",
-            element: <Product />,
-            loader: productLoader,
-            errorElement: <ErrorPage />,
-          },
-        ],
-      },
-    ],
-  },
-]);
+    basename: "/echo",
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
