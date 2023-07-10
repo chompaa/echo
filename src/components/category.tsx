@@ -8,10 +8,10 @@ function Category({
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) {
   return (
-    <div className="category">
+    <label className="category">
       <h4>{type}</h4>
-      <input type="checkbox" checked={enabled} onChange={onChange} />
-    </div>
+      <input id={type} type="checkbox" checked={enabled} onChange={onChange} />
+    </label>
   );
 }
 
