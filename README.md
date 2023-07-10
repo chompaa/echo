@@ -2,7 +2,7 @@
 
 A climbing marketplace (portfolio piece). Built with React, Zustand (state management) and SASS (styling).
 
-Click <a href="http://github.io/chompaa/echo/" target="_blank">here</a> for a demo.
+Click <a href="http://chompaa.github.io/chompaa/echo/" target="_blank">here</a> for a demo.
 
 ## Screenshots
 </br>
