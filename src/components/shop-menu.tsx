@@ -5,7 +5,11 @@ function ShopMenu({ close }: { close: () => void }) {
   return (
     <div className="shop-menu" onMouseLeave={close}>
       {Object.values(Department).map((department: string) => (
-        <Link to={`/shop/${department.toLowerCase()}`} onClick={close}>
+        <Link
+          key={department}
+          to={`/department/${department.toLowerCase()}`}
+          onClick={close}
+        >
           <button key={department}>{department}</button>
         </Link>
       ))}

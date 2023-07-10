@@ -54,7 +54,7 @@ function ProductView({
             <div className="products">
               {data.map(
                 (product) =>
-                  categories[product.type].enabled && (
+                  categories[product.type]?.enabled && (
                     <ProductCard
                       key={product.id}
                       id={product.id}

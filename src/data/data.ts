@@ -53,8 +53,8 @@ export const getProducts = (department?: string) => {
 };
 
 export const Department: ProductDepartment = {
-  CLOTHING: "Clothing",
-  EQUIPMENT: "Equipment",
+  CLOTHING: "clothing",
+  EQUIPMENT: "equipment",
 };
 
 export const Type: ProductType = {

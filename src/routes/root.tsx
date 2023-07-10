@@ -15,10 +15,10 @@ function Root() {
             Save up to 25% on selected items. Offer valid until 31st of August.
           </p>
           <div>
-            <Link to={`/shop/clothing`}>
+            <Link to={`/department/clothing`}>
               <button>Shop Clothing</button>
             </Link>
-            <Link to={`/shop/equipment`}>
+            <Link to={`/department/equipment`}>
               <button>Shop Equipment</button>
             </Link>
           </div>
