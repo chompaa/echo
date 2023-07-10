@@ -61,6 +61,7 @@ function ProductView({
                       image={product.image}
                       name={product.name}
                       price={product.price}
+                      salePrice={product.salePrice}
                       currency={"$"}
                     ></ProductCard>
                   )

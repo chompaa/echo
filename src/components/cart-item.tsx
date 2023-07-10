@@ -1,11 +1,13 @@
 import { IconTrash } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
+import Cost from "./cost";
 
 function CartItem({
   id,
   image,
   name,
   price,
+  salePrice,
   quantity,
   removeFromCart,
   closeCart,
@@ -16,6 +18,7 @@ function CartItem({
   image: string;
   name: string;
   price: number;
+  salePrice: number | undefined;
   quantity: number;
   removeFromCart: () => void;
   closeCart: () => void;
@@ -29,7 +32,7 @@ function CartItem({
       </Link>
       <div className="cart-item-info">
         <h5>{name}</h5>
-        <h5>${price}</h5>
+        <Cost currency={"$"} price={price} salePrice={salePrice}></Cost>
         <div className="quantity">
           <p>QTY</p>
           <button onClick={decrementQuantity}>-</button>

@@ -42,6 +42,7 @@ function Cart({ close }: { close: () => void }) {
                     image={product.image}
                     name={product.name}
                     price={product.price}
+                    salePrice={product.salePrice}
                     quantity={product.quantity}
                     removeFromCart={() => removeFromCart(product.id)}
                     closeCart={close}

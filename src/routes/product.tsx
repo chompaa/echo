@@ -3,6 +3,7 @@ import { ProductData, getProduct } from "../data/data";
 import "../styles/_product.scss";
 import { useCart } from "../hooks/useCart";
 import { Link } from "react-router-dom";
+import Cost from "../components/cost";
 
 export const loader: LoaderFunction = ({ params }) => {
   if (!params.id) {
@@ -31,7 +32,11 @@ function Product() {
         <div className="product-panel">
           <div>
             <h3>{product.name}</h3>
-            <h4>${product.price}</h4>
+            <Cost
+              currency={"$"}
+              price={product.price}
+              salePrice={product.salePrice}
+            ></Cost>
           </div>
           <p>{product.description}</p>
           {isInCart(product.id) ? (

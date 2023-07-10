@@ -6,23 +6,25 @@
 
 .product-card {
   width: 12.5rem;
-  height: 16.5rem;
+  height: 16.75rem;
   position: relative;
   background-color: $text-light;
   border: 2px solid transparent;
   padding: 1rem;
   cursor: pointer;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.1s ease-in-out;
 
   &:hover {
-      border-color: black;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
+
+  .product-title {
+    font-weight: 800;
   }
 
   p {
     font-weight: 600;
-  }
-
-  h4 {
-    font-weight: 800;
   }
 }
 
@@ -92,4 +94,14 @@
 
 img {
   width: 100%;
+}
+
+.product-sale {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: black;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-weight: 800;
 }

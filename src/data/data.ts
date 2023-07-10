@@ -25,6 +25,7 @@ export type ProductData = {
   name: string;
   image: string;
   price: number;
+  salePrice?: number;
   description: string;
 };
 
@@ -90,6 +91,7 @@ const Data: ProductList = {
       name: "Moon Wind Cheater Jacket",
       image: MoonWindCheaterJacket,
       price: 89.99,
+      salePrice: 49.99,
       description:
         "Highly wind resistant, showerproof, and super lightweight for easy storage, the \
         Wind Cheater Jacket is an essential for every outdoor rock enthusiast.",
@@ -101,6 +103,7 @@ const Data: ProductList = {
       name: "Moon Snap Back Cap",
       image: MoonSnapBackCap,
       price: 29.99,
+      salePrice: 24.99,
       description:
         "A casual Moon logo snapback cap with orange peak. Light, breathable and \
         equally great for sunny belay spots, summer bouldering and hopping around town.",
@@ -124,6 +127,7 @@ const Data: ProductList = {
       name: "Moon Warrior Crash Pad",
       image: MoonWarriorCrashPad,
       price: 399.99,
+      salePrice: 349.99,
       description:
         "If you buy just one bouldering crash pad in your lifetime, the Warrior Crash \
       Pad should be it. An industry-wide favourite used by many world-class boulderers, this pad \

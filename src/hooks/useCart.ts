@@ -32,7 +32,8 @@ export const useCart = create(
       getTotal: () =>
         get()
           .cart.reduce(
-            (total, product) => total + product.price * product.quantity,
+            (total, product) =>
+              total + (product.salePrice || product.price) * product.quantity,
             0
           )
           .toFixed(2),

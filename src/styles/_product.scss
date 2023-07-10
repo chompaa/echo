@@ -39,3 +39,13 @@
     cursor: not-allowed;
   }
 }
+
+.product-cost {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.product-cost-disabled {
+  color: #888;
+  text-decoration: line-through;
+}
