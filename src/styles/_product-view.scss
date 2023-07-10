@@ -45,6 +45,8 @@
 
   h4 {
     flex-grow: 1;
+    text-transform: lowercase;
+    font-style: italic;
   }
 
   input {
@@ -58,8 +60,8 @@
     &:checked:after {
       content: "";
       position: absolute;
-      width: 70%;
-      height: 70%;
+      width: 50%;
+      height: 50%;
       background-color: black;
       opacity: 1;
       bottom: 50%;

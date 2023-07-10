@@ -1,5 +1,6 @@
 import MoonLogoTee from "./images/moon-logo-tee.jpg";
 import MoonWindCheaterJacket from "./images/moon-wind-cheater-jacket.jpg";
+import MoonSnapBackCap from "./images/moon-snap-back-cap.jpg";
 import MoonBoulderingChalkBag from "./images/moon-bouldering-chalk-bag.jpg";
 import MoonWarriorCrashPad from "./images/moon-warrior-crash-pad.jpg";
 
@@ -61,6 +62,7 @@ export const Type: ProductType = {
   [Department.CLOTHING]: {
     TEE: "Tee",
     JACKET: "Jacket",
+    CAP: "Cap",
   },
   [Department.EQUIPMENT]: {
     CHALK_BAG: "Chalk Bag",
@@ -92,10 +94,21 @@ const Data: ProductList = {
         "Highly wind resistant, showerproof, and super lightweight for easy storage, the \
         Wind Cheater Jacket is an essential for every outdoor rock enthusiast.",
     },
+    {
+      id: 3,
+      department: Department.CLOTHING,
+      type: Type[Department.CLOTHING].CAP,
+      name: "Moon Snap Back Cap",
+      image: MoonSnapBackCap,
+      price: 29.99,
+      description:
+        "A casual Moon logo snapback cap with orange peak. Light, breathable and \
+        equally great for sunny belay spots, summer bouldering and hopping around town.",
+    },
   ],
   [Department.EQUIPMENT]: [
     {
-      id: 3,
+      id: 101,
       department: Department.EQUIPMENT,
       type: Type[Department.EQUIPMENT].CHALK_BAG,
       name: "Moon Chalk Bag",
@@ -105,7 +118,7 @@ const Data: ProductList = {
         "Legitimately good no-spill sport climbing chalk bag. Ideal for dipping in on a sport climb",
     },
     {
-      id: 4,
+      id: 102,
       department: Department.EQUIPMENT,
       type: Type[Department.EQUIPMENT].CRASH_PAD,
       name: "Moon Warrior Crash Pad",

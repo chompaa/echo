@@ -34,7 +34,7 @@ function Product() {
             <h4>${product.price}</h4>
           </div>
           <p>{product.description}</p>
-          {isInCart(product) ? (
+          {isInCart(product.id) ? (
             <button disabled={true}>Product in cart</button>
           ) : (
             <button onClick={() => addToCartAndShow(product)}>

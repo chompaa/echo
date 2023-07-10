@@ -63,7 +63,6 @@
   display: flex;
   flex-direction: column;
 
-
   .divider {
     margin-bottom: 2rem;
   }
@@ -88,6 +87,7 @@
   flex-grow: 1;
   overflow-y: auto;
   margin-bottom: 2rem;
+  padding: 0 0.5rem;
 }
 
 .cart-item-outer {
@@ -126,9 +126,45 @@
   h5 {
     margin-bottom: 0.5rem;
   }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+
   p {
-    font-style: italic;
     font-size: 0.83rem;
     font-weight: 600;
+  }
+
+  :nth-child(1) {
+    font-style: italic;
+  }
+
+  button {
+    background-color: transparent;
+    color: black;
+    width: fit-content;
+
+    &:hover {
+      background-color: transparent
+    }
+  }
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 0.5rem;
+
+  h4 {
+    font-weight: 800;
+  }
+
+  button {
+    width: fit-content;
   }
 }

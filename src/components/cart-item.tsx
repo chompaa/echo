@@ -9,6 +9,8 @@ function CartItem({
   quantity,
   removeFromCart,
   closeCart,
+  incrementQuantity,
+  decrementQuantity,
 }: {
   id: number;
   image: string;
@@ -17,6 +19,8 @@ function CartItem({
   quantity: number;
   removeFromCart: () => void;
   closeCart: () => void;
+  incrementQuantity: () => void;
+  decrementQuantity: () => void;
 }) {
   return (
     <div className="cart-item-outer">
@@ -26,7 +30,12 @@ function CartItem({
       <div className="cart-item-info">
         <h5>{name}</h5>
         <h5>${price}</h5>
-        <p>QTY: {quantity}</p>
+        <div className="quantity">
+          <p>QTY</p>
+          <button onClick={decrementQuantity}>-</button>
+          <p>{quantity}</p>
+          <button onClick={incrementQuantity}>+</button>
+        </div>
       </div>
       <div className="remove" onClick={removeFromCart}>
         <IconTrash size={18} />
