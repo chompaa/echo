@@ -26,7 +26,10 @@ export const useCart = create<Cart>((set, get) => ({
     set((state) => ({ cartVisible: !state.cartVisible })),
   getTotal: () =>
     get()
-      .cart.reduce((total, product) => total + product.price, 0)
+      .cart.reduce(
+        (total, product) => total + product.price * product.quantity,
+        0
+      )
       .toFixed(2),
   isInCart: (id: number) =>
     get().cart.some((product: ProductData) => product.id === id),
