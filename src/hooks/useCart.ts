@@ -7,7 +7,7 @@ interface Cart {
   addToCart: (product: ProductData) => void;
   removeFromCart: (id: number) => void;
   toggleCartVisible: () => void;
-  getTotal: () => number;
+  getTotal: () => string;
   isInCart: (id: number) => boolean;
   incrementQuantity: (id: number) => void;
   decrementQuantity: (id: number) => void;
@@ -25,7 +25,9 @@ export const useCart = create<Cart>((set, get) => ({
   toggleCartVisible: () =>
     set((state) => ({ cartVisible: !state.cartVisible })),
   getTotal: () =>
-    get().cart.reduce((total, product) => total + product.price, 0),
+    get()
+      .cart.reduce((total, product) => total + product.price, 0)
+      .toFixed(2),
   isInCart: (id: number) =>
     get().cart.some((product: ProductData) => product.id === id),
   incrementQuantity: (id: number) =>
