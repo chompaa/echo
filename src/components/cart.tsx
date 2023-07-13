@@ -2,7 +2,7 @@ import { createPortal } from "react-dom";
 import { useCart } from "../hooks/useCart";
 import CartItem from "./cart-item";
 import { ProductData } from "../data/data";
-import { IconShoppingBag } from "@tabler/icons-react";
+import { IconShoppingBag, IconX } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 
 function Cart({ close }: { close: () => void }) {
@@ -18,7 +18,12 @@ function Cart({ close }: { close: () => void }) {
     <>
       <div className="cart-background" onClick={close}></div>
       <div className="cart">
-        <h3>Cart</h3>
+        <div className="cart-header">
+          <h3>Cart</h3>
+          <button onClick={close}>
+            <IconX />
+          </button>
+        </div>
         <div className="divider"></div>
         {cart.length === 0 ? (
           <div className="empty">

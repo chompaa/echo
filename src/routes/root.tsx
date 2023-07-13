@@ -14,7 +14,7 @@ function Root() {
           <p>
             Save up to 25% on selected items. Offer valid until 31st of August.
           </p>
-          <div>
+          <div className="hero-buttons">
             <Link to={`/department/clothing`}>
               <button>Shop Clothing</button>
             </Link>

@@ -68,3 +68,20 @@
     gap: 0.5rem;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .hero-container {
+    margin: 0 2rem;
+    width: 80%;
+
+    p {
+      max-width: 30ch;
+      min-width: 10ch;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+}

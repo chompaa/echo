@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Department } from "../data/data";
 
-function ShopMenu({ close }: { close: () => void }) {
+function ShopMenu({ close }: { close?: () => void }) {
   return (
     <div className="shop-menu" onMouseLeave={close}>
       {Object.values(Department).map((department: string) => (
