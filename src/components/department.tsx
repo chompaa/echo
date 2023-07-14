@@ -1,10 +1,10 @@
-import ProductCard from "../components/product-card";
-import "../styles/_product-view.scss";
-import Category from "../components/category";
+import ProductCard from "./product-card";
+import "../styles/_department.scss";
+import Category from "./category";
 import { ProductData, ProductType } from "../data/data";
 import { useCategories } from "../hooks/useCategories";
 
-function ProductView({
+function Department({
   department,
   data,
   types,
@@ -74,4 +74,4 @@ function ProductView({
   );
 }
 
-export default ProductView;
+export default Department;

@@ -48,7 +48,10 @@ function Product() {
           )}
         </div>
       </div>
-      <Link to={`/department/${product.department.toLowerCase()}`}>
+      <Link
+        className="back-to-shop"
+        to={`/department/${product.department.toLowerCase()}`}
+      >
         <button>Back to shop</button>
       </Link>
     </div>

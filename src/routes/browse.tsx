@@ -1,6 +1,6 @@
 import { LoaderFunction, useLoaderData } from "react-router-dom";
 import { ProductData, ProductType, getProducts } from "../data/data";
-import ProductView from "../components/product-view";
+import ProductView from "../components/department";
 
 export const loader: LoaderFunction = ({ params }) => {
   const { department } = params;

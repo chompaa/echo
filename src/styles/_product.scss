@@ -49,3 +49,39 @@
   color: #888;
   text-decoration: line-through;
 }
+
+@media screen and (max-width: 1000px) {
+  .product-container-inner {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 30rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .product-container-outer {
+    padding-bottom: 0;
+    gap: 2rem;
+
+    .back-to-shop {
+      max-width: 34rem;
+      min-width: 0;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 2rem;
+      text-align: center;
+      flex-grow: 1;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .product-panel {
+    width: 100%;
+  } 
+}
