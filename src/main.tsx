@@ -16,7 +16,7 @@ const router = createBrowserRouter(
       errorElement: <ErrorPage />,
     },
     {
-      element: <Header />,
+      element: <Header shop={true} />,
       children: [
         {
           path: "department/:department",

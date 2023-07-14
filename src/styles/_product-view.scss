@@ -105,3 +105,34 @@ img {
   padding: 0.25rem 0.5rem;
   font-weight: 800;
 }
+
+@media screen and (max-width: 1000px) {
+  .container {
+    // margin-top: 2rem;
+  }
+
+  .content {
+    padding: 0 2rem;
+  }
+
+  .header {
+    border-bottom: 1px solid black;
+  }
+
+  .categories-container {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .products {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-card {
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}

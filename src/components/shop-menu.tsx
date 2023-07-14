@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { Department } from "../data/data";
 
-function ShopMenu({ close }: { close?: () => void }) {
+function ShopMenu({ close, shop }: { close?: () => void; shop?: boolean }) {
   return (
-    <div className="shop-menu" onMouseLeave={close}>
+    <div
+      className={`shop-menu ${shop ? "shop-menu-browse" : ""}`}
+      onMouseLeave={close}
+    >
       {Object.values(Department).map((department: string) => (
         <Link
           key={department}
