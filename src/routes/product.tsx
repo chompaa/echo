@@ -4,6 +4,7 @@ import "../styles/_product.scss";
 import { useCart } from "../hooks/useCart";
 import { Link } from "react-router-dom";
 import Cost from "../components/cost";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 export const loader: LoaderFunction = ({ params }) => {
   if (!params.id) {
@@ -15,6 +16,8 @@ export const loader: LoaderFunction = ({ params }) => {
 };
 
 function Product() {
+  useScrollToTop();
+
   const { product } = useLoaderData() as { product: ProductData };
   const { addToCart, isInCart, toggleCartVisible } = useCart();
 

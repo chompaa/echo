@@ -1,6 +1,7 @@
 import { LoaderFunction, useLoaderData } from "react-router-dom";
 import { ProductData, ProductType, getProducts } from "../data/data";
 import ProductView from "../components/department";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 export const loader: LoaderFunction = ({ params }) => {
   const { department } = params;
@@ -14,6 +15,8 @@ export const loader: LoaderFunction = ({ params }) => {
 };
 
 function Browse() {
+  useScrollToTop();
+
   const { department, products } = useLoaderData() as {
     department: string;
     products: { data: ProductData[]; types: ProductType };
